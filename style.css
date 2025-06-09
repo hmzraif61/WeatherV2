@@ -1,0 +1,41 @@
+/* Utilisé uniquement pour compléter Tailwind si besoin */
+#suggestions {
+  position: absolute;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-top: 0.25rem;
+}
+
+body.dark #suggestions {
+  background: #2d3748;
+  color: white;
+}
+
+#suggestions li {
+  transition: background 0.2s ease;
+}
+
+#suggestions li:hover {
+  background-color: #e2e8f0;
+}
+
+body.dark #suggestions li:hover {
+  background-color: #4a5568;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  .weather-card {
+    font-size: 0.95rem;
+  }
+}
+
