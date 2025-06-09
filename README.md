@@ -19,6 +19,9 @@ Cette application permet de consulter les prévisions météorologiques d'une co
 - Mode clair / mode sombre
 - Interface responsive (adaptée aux mobiles)
 
+## 🌍 Démo en ligne
+
+🔗 https://hmzraif61.github.io/WeatherV2/
 
 ## 👤 Auteur
 
