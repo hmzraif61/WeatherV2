@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instant Weather V2</title>
-  <script src="https://cdn.tailwindcss.com" ></script>
-  <script> tailwind.config = {darkMode: 'class'}
-</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script> tailwind.config = { darkMode: 'class' }
+  </script>
 
   <link rel="icon" href="https://emoji.gg/assets/emoji/7196-weather.png" />
 </head>
-<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+<body
+  class="flex flex-col min-h-screen bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
   <header class="bg-blue-600 text-white p-6 flex justify-between items-center shadow">
     <h1 class="text-2xl font-bold">🌤️ Instant Weather V2</h1>
-    <button id="darkModeToggle" class="bg-white text-blue-600 px-3 py-1 rounded-md shadow hover:bg-blue-50">🌙 Mode sombre</button>
+    <button id="darkModeToggle" class="bg-white text-blue-600 px-3 py-1 rounded-md shadow hover:bg-blue-50">🌙 Mode
+      sombre</button>
   </header>
 
-<main class="flex-1 flex justify-center items-start p-4">
-  
-<form id="weatherForm" class="p-6 rounded-lg shadow-md space-y-4 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition">
-      <label class="block">
-        <span class="font-semibold">Commune ou code postal :</span>
-        <input type="text" id="searchInput" class="w-full mt-1 p-2 border rounded focus:outline-none focus:ring focus:ring-blue-400 dark:bg-gray-700" autocomplete="off" required />
-        <ul id="suggestions" class="bg-white dark:bg-gray-700 border mt-1 rounded shadow absolute z-10 hidden"></ul>
-      </label>
+  <main class="flex-1 flex justify-center items-start p-4">
+    <div class="w-full max-w-3xl bg-gray-100 dark:bg-gray-900 rounded-lg shadow transition p-4">
 
-      <label class="block">
-        <span class="font-semibold">Nombre de jours (1-7) :</span>
-        <input type="range" id="nbJours" min="1" max="7" value="1" class="w-full">
-        <span id="valeurJours" class="block text-center">1 jour</span>
-      </label>
+      <form id="weatherForm"
+        class="p-6 rounded-lg shadow-md space-y-4 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 transition">
+        <label class="block">
+          <span class="font-semibold">Commune ou code postal :</span>
+          <input type="text" id="searchInput"
+            class="w-full mt-1 p-2 border rounded focus:outline-none focus:ring focus:ring-blue-400 dark:bg-gray-700"
+            autocomplete="off" required />
+          <ul id="suggestions" class="bg-white dark:bg-gray-700 border mt-1 rounded shadow absolute z-10 hidden"></ul>
+        </label>
 
-      <fieldset class="border p-4 rounded">
-        <legend class="font-semibold mb-2">Options supplémentaires</legend>
-        <div class="grid grid-cols-2 gap-2">
-          <label><input type="checkbox" value="latitude" /> Latitude</label>
-          <label><input type="checkbox" value="longitude" /> Longitude</label>
-          <label><input type="checkbox" value="pluie" /> Pluie (mm)</label>
-          <label><input type="checkbox" value="vent" /> Vent moyen</label>
-          <label><input type="checkbox" value="direction" /> Direction du vent</label>
-        </div>
-      </fieldset>
+        <label class="block">
+          <span class="font-semibold">Nombre de jours (1-7) :</span>
+          <input type="range" id="nbJours" min="1" max="7" value="1" class="w-full">
+          <span id="valeurJours" class="block text-center">1 jour</span>
+        </label>
 
-      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">🔍 Obtenir la météo</button>
-    </form>
+        <fieldset class="border p-4 rounded">
+          <legend class="font-semibold mb-2">Options supplémentaires</legend>
+          <div class="grid grid-cols-2 gap-2">
+            <label><input type="checkbox" value="latitude" /> Latitude</label>
+            <label><input type="checkbox" value="longitude" /> Longitude</label>
+            <label><input type="checkbox" value="pluie" /> Pluie (mm)</label>
+            <label><input type="checkbox" value="vent" /> Vent moyen</label>
+            <label><input type="checkbox" value="direction" /> Direction du vent</label>
+          </div>
+        </fieldset>
 
-    <section id="resultats" class="mt-8 grid gap-4"></section>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">🔍 Obtenir
+          la météo</button>
+      </form>
+
+      <section id="resultats" class="mt-8 grid gap-4"></section>
   </main>
 
-<footer class="text-center text-sm p-4 bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-400">
-  &copy; 2025 – Projet SAÉ 2.03 – Instant Weather V2
-</footer>
+  <footer class="text-center text-sm p-4 bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-400">
+    &copy; 2025 – Projet SAÉ 2.03 – Instant Weather V2
+  </footer>
 
 
   <script src="script.js"></script>
 </body>
+
 </html>
